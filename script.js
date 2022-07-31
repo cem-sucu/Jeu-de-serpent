@@ -3,7 +3,7 @@ window.onload = function () {
     var canvasHeight = 500;
     var blockSize = 25;
     var ctx;
-    var delay = 100;
+    var delay = 50;
     var xCoord = 0;
     var yCoord = 0;
     var snakee;
@@ -20,7 +20,7 @@ window.onload = function () {
         canvas.width = canvasWidth;
         canvas.height = canvasHeight;
         canvas.style.border = "30px solid crimson";
-        canvas.style.borderRadius = "50px";
+        canvas.style.borderRadius = "30px";
         canvas.style.margin = "50px auto";
         canvas.style.display = "block";
         canvas.style.backgroundColor = "#ddd";
@@ -129,6 +129,7 @@ window.onload = function () {
 
         this.draw = function () {
             ctx.save();
+
             ctx.fillStyle = "#483d8b";
             for (var i = 0; i < this.body.length; i++) {
                 drawBlock(ctx, this.body[i]);
